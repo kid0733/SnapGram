@@ -12,31 +12,9 @@
   body {
     @apply bg-dark-1 text-white min-h-screen font-inter;
   }
-  .dots {
-    background-image: radial-gradient(rgba(123, 241, 168, 0.309) 6%, transparent 10%), radial-gradient(rgba(123, 241, 168, 0.365) 6%, transparent 10%);
-    background-size: 90px 40px;
-    background-position: 0 0, 60px 60px;
-    animation-name: backgroundmovement;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transition: background-position 0.3s ease; /* Transition for background position */
-    /* Delay the animation by 2 seconds */
-    animation-delay: 2s;
-  }
-  
-  @keyframes backgroundmovement {
-    0% {
-      background-position: 0 0, 60px 60px;
-    }
-    100% {
-      background-position: 100px 100px, 160px 160px;
-    }
-  }
 }
 
 @layer utilities {
-
   /* TYPOGRAPHY */
   .h1-bold {
     @apply text-[36px] font-bold leading-[140%] tracking-tighter;
