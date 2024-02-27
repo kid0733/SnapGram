@@ -9,9 +9,9 @@ const AuthLayout = () => {
       ): (
         <>
 
-              <section className="flex flex-1 justify-center items-center flex-col py-10">
-                <Outlet />
-              </section>
+          <section className="max-h-screen max-w-5xl w-full items-center justify-center gap-5 px-14 flex flex-1 flex-col mb-40">
+            <Outlet />
+          </section>
 
           <img 
             src="assets/images/side-img.svg" 
