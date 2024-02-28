@@ -9,7 +9,7 @@ const AuthLayout = () => {
       ): (
         <>
 
-          <section className="max-h-screen max-w-5xl w-full items-center justify-center gap-5 px-14 flex flex-1 flex-col mb-40">
+          <section className="max-h-screen max-w-5xl w-full items-center justify-center gap-5 px-14 flex flex-1 flex-col ">
             <Outlet />
           </section>
 

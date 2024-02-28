@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage,
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { SignupValidation } from "@/lib/validation"
@@ -10,8 +10,10 @@ import { Loader } from "lucide-react"
 import { Link } from "react-router-dom"
 import { createUserAccount } from "@/lib/appwrite/api"
 
+import { useToast } from "@/components/ui/use-toast"
 
 const SignupForm = () => {
+  const { toast } = useToast()
   const isLoading=true
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignupValidation>>({
@@ -28,12 +30,21 @@ const SignupForm = () => {
   async function onSubmit(values: z.infer<typeof SignupValidation>) {
     const newUser= await createUserAccount(values);
 
-    console.log(newUser);
+    if(!newUser){
+      
+      return toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      })
+    }
+
+    // const sesion= await signInAccount()
   }
 
   return (
-    <Form {...form}>
-      <div className="sm:w-420 flex-center flex-col mt-20">
+    <Form  {...form}>
+      <div className="max-h-screen sm:w-420 flex-center flex-col mt-10">
         <img className="max-h-14" src="/assets/images/logo.png" alt="logo" />
         <h2 className="h3-bold md:h3-bold pt-5 sm:pt-12">Create a new account</h2>
         <p className="max-w-xs text-center text-light-3 small-medium md:base-regular my-2">To use Snapgram enter your account details</p>
