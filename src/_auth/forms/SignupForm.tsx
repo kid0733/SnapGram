@@ -7,16 +7,19 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage,
 import { Input } from "@/components/ui/input"
 import { SignupValidation } from "@/lib/validation"
 import { Loader } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { useToast } from "@/components/ui/use-toast"
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queritesAndMutation"
+import { useUserContext } from "@/context/AuthContext"
 
 const SignupForm = () => {
   const { toast } = useToast()
-  const {mutateAsync: createUserAccount , isLoading: isCreatingUser}= useCreateUserAccount()
+  const {checkAuthUser,isLoading:isUserLoading}=useUserContext()
+  const navigate=useNavigate()
+  const {mutateAsync: createUserAccount , isPending: isCreatingAccount}= useCreateUserAccount()
 
-  const {mutateAsync: signInAccount, isLoading: isSigningIn} = useSignInAccount()
+  const {mutateAsync: signInAccount, isPending: isSigningIn} = useSignInAccount()
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignupValidation>>({
@@ -52,7 +55,15 @@ const SignupForm = () => {
       return toast({title: "Error", description: "Something went wrong. Please try again.", variant: "destructive",})
     }
 
+    const isLoggedIn=await checkAuthUser();
     
+    if(isLoggedIn){
+      form.reset()
+
+      navigate('/')
+    }else{
+      return toast({title: "Error", description: "Something went wrong. Please try again.", variant: "destructive",})
+    }
 
   }
 
@@ -117,7 +128,7 @@ const SignupForm = () => {
             )}
           />
           <Button className="shad-button_primary" type="submit">
-            {isCreatingUser?(
+            {isCreatingAccount?(
               <div className="flex-center gap-2">
                 <Loader/> Loading...
               </div>
@@ -126,7 +137,7 @@ const SignupForm = () => {
             )}
           </Button>
           <p className="text-small-regular text-light-2 text-center mt-2">
-            ALready have an account? 
+            Already have an account? 
             <Link to="/sign-in" className="text-primary-500 text-small-semibold ml-1" >Log in</Link>
           </p>
         </form>
