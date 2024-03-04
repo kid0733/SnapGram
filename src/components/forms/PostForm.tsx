@@ -39,7 +39,7 @@ const PostForm = ({post}:PostFormProps) => {
         })
         if(!newPost){
             toast({
-                title: 'Could not Create Post Please Try Again, Please try again',
+                title: 'Could not Create Post, Please try again',
             })
         }
 
