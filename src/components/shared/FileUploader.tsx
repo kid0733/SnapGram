@@ -30,7 +30,7 @@ const FileUploader = ({fieldChange, mediaUrl}:FileUploaderProps) => {
         {
             fileUrl ?(
                 <>
-                    {`${console.log(fileUrl)} `}
+                    
                     
                     <div className="flex flex-1 justify-center w-full p-5 lg:p-10 bg-zinc-900 rounded-3xl">
                         <img 

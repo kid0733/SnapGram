@@ -17,10 +17,10 @@ const Leftsidebar= () => {
     },[isSuccess])
 
   return (
-    <nav className="leftsidebar">
+    <nav className="leftsidebar max-h-full">
         <div className="flex flex-col gap-11">
             <Link to="/" className="flex gap-3 items-center justify-center">
-                <img src="assets/images/logo.png" alt="logo" width={38}/>
+                <img src="assets/images/logo.png" width={38}/>
             </Link>
             <Link to={`/profile/${user.id}`} className='flex gap-3 items-center'>
                 <img src={user.imageUrl || '(.)-(.)'} alt="profile" className='h-8 w-8 rounded-full' />
