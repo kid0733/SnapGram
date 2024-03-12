@@ -14,8 +14,8 @@ const AuthLayout = () => {
           </section>
 
           <img 
-            src="assets/images/side-img.svg" 
-            alt="logo"
+            src='\assets\images\sideVid.mp4' 
+            alt='video'
             className='hidden xl:block w-1/2 object-cover bg-no-repeat' 
           />
         </>
