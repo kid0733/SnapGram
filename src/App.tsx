@@ -12,7 +12,7 @@ import { useState } from 'react'
 
 
 const App = () => {
-  const [started, setStarted] = useState(false);
+
   return (
     <main className="flex h-screen">
       <Routes>
