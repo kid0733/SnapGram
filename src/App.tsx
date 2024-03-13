@@ -8,8 +8,6 @@ import { AllUsers, CreatePost, EditPost, Explore, Home, PostDetails, Profile, Sa
 import RootLayout from './_root/RootLayout'
 import { Toaster } from './components/ui/toaster'
 import './globals.css'
-import { useState } from 'react'
-
 
 const App = () => {
 
