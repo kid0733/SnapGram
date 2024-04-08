@@ -1,6 +1,6 @@
 # 🥊 OnePunchGram 📸
 
-Get ready to experience the future of social media with OnePunchGram! 🚀 Developed as a personal project by [Your Name] in the vibrant city of Sydney, Australia 🇦🇺, during February 2024, this cutting-edge app will knock your socks off! 💥 OnePunchGram combines a stunning user interface, infinite scrolling capabilities, and a native mobile feel to deliver a seamless and immersive social media experience like no other! 😎
+Get ready to experience the future of social media with OnePunchGram! 🚀 Developed as a personal project by me in the vibrant city of Sydney, Australia 🇦🇺, during February 2024, this cutting-edge app will knock your socks off! 💥 OnePunchGram combines a stunning user interface, infinite scrolling capabilities, and a native mobile feel to deliver a seamless and immersive social media experience like no other! 😎
 
 ## 🌟 Features
 
@@ -31,26 +31,13 @@ Ready to embark on the OnePunchGram adventure? Follow these steps to run it loca
 6. Start the development server: `npm start`
 7. Open your browser and visit: `http://localhost:3000`
 
-## 🤝 Contributing
 
-Want to be a part of the OnePunchGram revolution? Contributions are always welcome! Here's how you can get involved:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature`
-3. Make your changes and commit them: `git commit -m 'Add some mind-blowing feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Submit a pull request detailing your amazing changes.
-
-## 📜 License
-
-OnePunchGram is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license. 📝
 
 ## 📞 Contact
 
 If you have any questions, suggestions, or just want to say hi, don't hesitate to reach out:
 
-- 📧 Email: [your-email@example.com](mailto:your-email@example.com)
-- 🐦 Twitter: [@yourusername](https://twitter.com/yourusername)
-- 😺 GitHub: [yourusername](https://github.com/yourusername)
+- 📧 Email: siddhantskarki@gmail.com
+
 
 Thank you for joining the OnePunchGram community! We can't wait for you to experience the app and become a part of this exciting social media journey. Get ready to punch your way through the digital world! 👊💥
